@@ -65,11 +65,14 @@ function addEncryptedMessageToList(original, encrypted) {
     list.appendChild(listItem); // Añade el elemento de lista a la lista visual
 }
 
-// Función para eliminar todos los mensajes encriptados
+// Función para eliminar todos los mensajes encriptados y limpiar las cajas de texto
 function deleteAllMessages() {
     encryptedMessages.length = 0; // Limpia el array que almacena los mensajes encriptados
     document.getElementById('encryptedMessagesList').innerHTML = ''; // Limpia la lista visual en la página
-    alert("Todos los mensajes encriptados han sido eliminados."); // Muestra una alerta confirmando la eliminación
+    document.getElementById('inputText').value = ''; // Limpia el campo de entrada de texto
+    document.getElementById('decryptInput').value = ''; // Limpia el campo de desencriptación
+    document.getElementById('decryptedText').innerText = ''; // Limpia el área de texto donde se muestra el mensaje desencriptado
+    alert("Todos los mensajes y entradas han sido eliminados."); // Muestra una alerta confirmando la eliminación
 }
 
 // Función para copiar texto al portapapeles
