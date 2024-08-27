@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metaetiquetas esenciales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Mágico</title>
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a una hoja de estilos de iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal para todo el contenido -->
+    <div class="container">
+        <h1>✨ Encriptador Mágico ✨</h1>
+
+        <!-- Sección de entrada de texto para encriptar -->
+        <div class="input-section">
+            <label for="inputText">Escribe tu texto aquí:</label>
+            <div class="input-group">
+                <textarea id="inputText" rows="3" placeholder="Escribe tu texto aquí..."></textarea>
+                <button onclick="encryptText()" class="btn btn-encrypt"><i class="fas fa-lock"></i> Encriptar</button>
+            </div>
+        </div>
+
+        <!-- Sección para desencriptar el texto -->
+        <div class="output-section">
+            <h2><i class="fas fa-lock-open"></i> Desencriptador</h2>
+            <div class="input-group">
+                <textarea id="decryptInput" rows="3" placeholder="Escribe el texto encriptado aquí..."></textarea>
+                <button onclick="decryptText()" class="btn btn-decrypt"><i class="fas fa-unlock"></i> Desencriptar</button>
+            </div>
+            <div class="result" id="decryptedText"></div>
+        </div>
+
+        <!-- Sección para mostrar la lista de mensajes encriptados -->
+        <div class="storage-section">
+            <h2>🔒 Mensajes Encriptados</h2>
+            <ul id="encryptedMessagesList"></ul>
+            <!-- Botón para eliminar todos los mensajes encriptados -->
+            <button onclick="deleteAllMessages()" class="btn btn-delete"><i class="fas fa-trash-alt"></i> Eliminar Todo</button>
+        </div>
+
+        <!-- Enlace a la página de instrucciones -->
+        <p><a href="instrucciones.html" class="btn">Ver Instrucciones</a></p>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+
+<footer>
+    <p>&copy; 2024, elaborado por: Anderson Pulido</p>
+</footer>
+
+</html>
